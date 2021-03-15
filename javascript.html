@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+function geek()
+{
+	var name=document.getElementById("fname");
+	var address=document.getElementById("address");
+	var sub=document.getElementById("subject");
+	var radius=document.getElementById("yesno");
+	var formvalid=false;
+	if(name.value==name.value==null)
+{
+	window.alert("enter valid data");
+	return false;
+}
+if(address.value=="")
+{
+	window.alert("enter valid address");
+	return false;
+}
+if(sub.selectedindex=="")
+{
+	window.alert("enter valid subject");
+	return false;
+}
+var i=0;
+while(!formvalid&&i<radius.length)
+{
+	if(radius[i].checked)formvalid=true;
+	i++;
+}
+if(!formvalid)alert("please enter your gender");
+return true;
+}
+</script>
+</head>
+<body>
+<form name="stud" onsubmit="return geek()">
+<h2>REGISTRATION FORM </h2><br>
+name:&nbsp;&nbsp;&nbsp;
+<input type="text" name="name" id="fname" />
+<hr><hr>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+address <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<textarea name="address" type="text" rows="5" cols="20" id="address">
+</textarea>
+<br><br>
+gender:<input type="radio" id="1" name="yesno" value="2" />
+FEMALE 
+<input type="radio" id="1" name="yesno" value="2" />
+MALE<br><br >
+QUALIFICATION:<select name="subject" id="subject">
+<option value="s">MCA</option>
+<option value="s">BCA</option>
+<option value="s">MBA</option>
+<option value="s">BBA</option>
+<option value="s">BTECH</option>
+<option value="s">MTECH</option>
+</select><br><br>
+<input type="submit" value="conform">
+</form>
+</body>
+</html>
